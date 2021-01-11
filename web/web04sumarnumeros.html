@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Numero suma</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/practicaestilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+        <h1>Suma numero</h1>
+        <form>
+            <label>Numero:</label>
+            <input type="number" id="cajanumero"/>
+            <button type="button" onclick="mostrarSuma()">mostrar suma</button>
+            <label for="cajanumero2">Numero2:</label>
+            <input type="number" id="cajanumero2"/>  
+        </form>
+        <h1 id="resultado" style="text-shadow: 2px 2px red"></h1>
+        <script type="text/javascript">
+            function mostrarSuma() {
+    var cajanumero =
+            document.getElementById("cajanumero");
+    var numero = cajanumero.value;
+    numero = parseInt(numero);
+    var cajanumero2 = 
+            document.getElementById("cajanumero2");
+    var numero2 = cajanumero2.value;
+    numero2 = parseInt(numero2);
+    var suma = numero + numero2 ; 
+    var resultado = document.getElementById("resultado");
+    resultado.innerText = "La suma de " + numero  +" + " + numero2 +" =" + suma;
+}
+            
+        </script>
+    </body>
+</html>

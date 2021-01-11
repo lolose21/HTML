@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Caja de texto para pedir un número
+Mostramos una tabla con operación y resultado
+5*1  5
+5*2  10
+5*3  15
+-->
+<html>
+    <head>
+        <title>Tabla de multiclicar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Table de multiplicar</h1>
+        <form>
+            <label>Numero ? </label>
+            <input type="number" id="cajanumero" name="cajanumero"/>
+            <button type="button" onclick="tablaMultiplicar()">
+                Multiplica
+            </button>
+            <h2 id="resultado"></h2>
+        </form>
+        
+        <table border="3">
+            <tr>
+            <td>numero</td>
+            <td>multiplicado</td>   
+            <td>resultado</td>
+            </tr>
+        </table>
+        <script>
+            function tablaMultiplicar() {
+        var cajanumero =
+                document.getElementById("cajanumero");
+        var numero = parseInt(cajanumero.value);
+        var html = "<table border ='3'";
+        for (var i = 1 ; i < 11 ; ++i){
+            html += "<tr>";
+            html += "<td> " +numero + "</td>";
+            html += "<td> x "+ i +" </td>";
+            html += "<td> = " + (numero * i) +"</td>";
+            html += "</tr>";
+        }
+        html += "</table>";
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML = html;
+}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/jquery.jqZoom.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+        <h1>pligin zoom</h1>
+          <div class="zoom-box" style="z-index: 2;">
+        <img src="images/Dragon.jpg" alt=""/>
+          </div>
+        <script src="js/jquery-3.5.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.jqZoom.js" type="text/javascript"></script>
+        <script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+        <script>
+ $(document).ready(function(){
+        $("img").jqZoom({
+            selectorWidth: 30,
+            selectorHeight: 30,
+            viewerWidth: 400,
+            viewerHeight: 300
+        });
+
+    });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--Ejemplo número Positivo, negativo, cero
+-->
+<html>
+    <head>
+        <title>Positivo negativo cero</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Positivo negativo cero</h1>
+        <form>
+        <label>Numero:</label>
+        <input type="number" id="cajanumero" name="cajanumero"/>
+        <button type="button" onclick="numeroPnc()">mostrar</button>
+        </form>
+        <h1 id="resultado" style="color:blue"></h1>
+        <script type="text/javascript">
+            function numeroPnc() {
+                var cajanumero =
+                        document.getElementById("cajanumero");
+                var numero = parseInt(cajanumero.value);
+                if(numero <0){
+                    resultado.innerText="el numero es negativo";
+                }else if(numero >0){
+                    resultado.innerText="el numero es positivo";
+                }else{
+                    resultado.innerText="es cero";
+                }
+}
+        </script>
+    </body>
+</html>

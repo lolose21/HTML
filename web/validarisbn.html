@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+-	Debemos comprobar que el número introducido tiene 10 caracteres.
+EJEMPLO DE NUMERO ISBN QUE ESTÁ BIEN: 8441513929
+1.- Se descompone la cadena y se multiplica cada número por la posición que ocupa en la cadena:
+ 8 * 1
+ 4 * 2
+ 4 * 3
+ 1 * 4
+ 5 * 5
+ .
+ .
+ 9 * 10
+
+2.- La suma de todas estas multiplicaciones se divide entre 11, y si el resto es cero, el número ISBN es correcto.
+
+-->
+<html>
+    <head>
+        <title>Validar isbn</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>validar numero ISBN</h1>
+    
+     <form>
+            <label>Introduzca 10 numeros</label>
+            <input type="number" id="cajanumero"
+                   name="cajanumero"/>
+            <label id="numero"></label>
+            <button type="button" onmouseover="validarisbn()">
+                Validar
+            </button>
+     </form>
+        <script type="text/javaescrip">
+           if(validarisbn.length() !=10){
+               isbn.innerText="introduzca 10 numeros";
+           }
+           function sumarNumeros() {
+            //RECUPERAMOS LA CAJA
+            var caja = document.getElementById("cajanumero");
+            var resultado = document.getElementById("resultado");
+            var textonumeros = caja.value;  //1234
+            var suma = 0;
+            //RECORREMOS TODOS LOS CARACTERES DE UNO EN UNO
+            for (var i = 0; i < textonumeros.length; i++) {
+                //RECUPERAMOS CADA LETRA DEL TEXTO
+                //POR SU POSICION
+                var letra = textonumeros.charAt(i);
+                //CONVERTIMOS LA LETRA A VALOR NUMERICO
+                var num = parseInt(letra);
+                //VAMOS SUMANDO CADA UNO DE LOS NUMEROS
+                //DE LA CADENA
+                suma += num;
+            }
+
+}
+        </script>
+    </body>
+</html>

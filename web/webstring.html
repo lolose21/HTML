@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+ 
+•	toUpperCase(): Convertir a Mayúsculas
+•	toLowerCase(): Convierte a minúsculas
+•	charAt(INDICE): Devuelve el carácter 
+que corresponde con dicho indice.
+•	indexOf("CARÁCTER"): Devuelve la primera
+posición de un carácter en el texto empezando 
+desde la izquierda.  Si no encuentra el texto, devuelve -1
+•	lastIndexOf("CARÁCTER"): Devuelve la primera 
+posición de un carácter empezando por la derecha.
+•	substr(INICIO, LONGITUD): Devuelve una subcadena
+entre el inicio (incluido) y la longitud (número de 
+caracteres).
+•	replace(ANTIGUO TEXTO, NUEVO TEXTO): Reemplaza el 
+antiguo texto por el nuevo texto.
+•	trim(): Quita espacios al inicio y al final del texto.
+ 
+
+-->
+<html>
+    <head>
+        <title>STRING</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+   
+        <script type="text/javascript">
+        function evaluarString()
+        {
+            var texto = "VISUAL STUDIO net";
+            var resultado =
+                document.getElementById("resultado");
+            var html = "<ul>";
+            html += "<li>length: "
+                + texto.length + "</li>";
+            html += "<li>toUpperCase(): "
+                + texto.toUpperCase() + "</li>";
+            html += "<li>toLowerCase(): "
+                + texto.toLowerCase() + "</li>";
+            html += "<li>indexOf('S'): "
+                + texto.indexOf("S") + "</li>";
+            html += "<li>lastIndexOf('S'): "
+                + texto.lastIndexOf("S") + "</li>";
+            html += "<li>indexOf('S', 3): "
+                + texto.indexOf("S", 3) + "</li>";
+ 
+            html += "<li>substr(2,3): "
+                + texto.substr(2, 3) + "</li>";
+            html += "<li>substring(2,3): "
+                + texto.substring(2, 3) + "</li>";
+            html += "<li>substr(7): "
+                + texto.substr(7) + "</li>";
+            html += "<li>charAt(8): "
+                + texto.charAt(8) + "</li>";
+            html += "<li>strike(): "
+                + texto.strike() + "</li>";
+            html += "<li>replace('S', '@@@'): ".bold()
+                + texto.replace("S", "@@@") + "</li>";
+            html += "</ul>";
+            resultado.innerHTML = html;
+        }
+    </script>
+    
+    <h1>VISUAL STUDIO NET</h1>
+    <button type="button" onclick="evaluarString()">
+        Evaluar métodos String
+    </button>
+    <div id="resultado"></div>
+
+    
+    </body>
+</html>

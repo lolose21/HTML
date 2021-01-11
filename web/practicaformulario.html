@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+Un formulario para pedir datos personales de una persona.
+Queremos placeholder
+    Nombre obligatorio
+    Email: opcional.
+    Fecha de nacimiento.
+    Página Web favorita
+    Edad: solo número
+-->
+<html>
+    <head>
+        <title>PRACTICA FORMULARIO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Formulario</h1>
+         <form>
+        <table border="1"><thead><tr>
+                    <tH>DESCRICCION</th>
+                    <th>DATOS</th>
+                </tr>
+            </thead>
+           
+            <tbody><tr>
+                    <td>
+                     NOMBRE   
+                    </td><td>
+                        <input type="text" name="nombre" required/>
+                    </td>
+                </tr><tr><td>
+                    EMAIL
+                    </td><TD>
+                        <input type="email" placeholder="introduzca email"
+                               name="email" />
+                    </TD>
+                </tr><tr><td>
+                    FECHA NC
+                    </td><td>
+                        <input type="date" name="fecha" required/>
+                    </td><tr><td>
+                        Pagina wep fv
+                    </td><td>
+                        <input type="url" placeholder="web favorita"
+                               name="web"/>
+                    </td><tr><td>
+                        EDAD
+                    </td><td>
+                        <input type="number" max="90"
+                               name="numero"/>
+                    </td>
+                        
+                </tr>
+                    
+            </tbody>
+        </table>
+             <button type="submit">
+                 enviar
+             </button>
+        </form>
+        <div></div>
+    </body>
+</html>

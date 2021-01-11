@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html>
+    <head>
+        <title>Conjetura de collatz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Conjetura collatz</h1>
+        <form>
+            <label>Introduzca un numero</label>
+            <input type="number" id="cajanumero"
+                   name="cajanumero"/>
+            <label id="mensaje"></label>
+            <button type="button" onclick="mostrarCollatz()">
+                MOSTRAR COLLATZ
+            </button>
+            <div id="resultado"></div>
+           
+        </form>
+        <script type="text/javascript">
+            function mostrarCollatz() {
+                var cajanumero =
+    document.getElementById("cajanumero");
+    var numero = parseInt(cajanumero.value);
+    var label = document.getElementById("mensaje");
+    if(numero <= 0){
+        label.innerText = "el numero debe  ser mayor a 1";
+        label.style.color ="red";
+    }else{
+        var html = "<ul>";
+        while (numero != 1){
+            if (numero%2 == 0){
+                numero = numero / 2 ;
+            }else{
+                numero =numero * 3 +1 ;
+            }
+            html += "<li>" + numero + "</li>";
+        }
+        html +="</ul>";
+        var resultado =
+                document.getElementById("resultado");
+        resultado.innerHTML = html;
+        }
+    }
+        </script>
+    </body>
+</html>

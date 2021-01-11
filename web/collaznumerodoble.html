@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#botondoble").click(function () {
+                //RECUPERAR EL VALOR DE LA CAJA
+                var numero =
+                    parseInt($("#cajanumero").val());
+                var operacion = numero * 2;
+                //PINTAMOS SOBRE EL <h1>
+                $("#resultado").text(operacion);
+            });
+ 
+            $("#botoncollatz").click(function () {
+                //SI ES PAR, DIVIDIMOS ENTRE 2
+                //IMPAR MULTIPLICAMOS POR 3 + 1
+                //RECUPERAMOS EL NUMERO DE LA CAJA
+                var numero = parseInt($("#cajanumero").val());
+                //VARIABLE PARA EL CODIGO HTML
+                var tabla = "<table border='1'>";
+                while (numero != 1) {
+                    //POR CADA VUELTA DEL BUCLE
+                    //CREAMOS UNA FILA
+                    tabla += "<tr>";
+                    if (numero % 2 == 0) {
+                        //PAR
+                        numero = numero / 2;
+                    } else {
+                        //IMPAR
+                        numero = numero * 3 + 1;
+                    }
+                    //DIBUJAMOS UNA COLUMNA
+                    tabla += "<td>" + numero + "</td>";
+                    //CERRAMOS LA FILA
+                    tabla += "</tr>";
+                }
+                //CERRAMOS LA TABLA
+                tabla += "</table>";
+                //PINTAMOS LA TABLA
+                $("#collatz").html(tabla);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>Introduzca un número</label>
+        <input type="number" id="cajanumero" />
+        <button type="button" id="botondoble">
+            Número doble
+        </button>
+        <button type="button" id="botoncollatz">
+            Collatz
+        </button>
+    </form>
+    <div id="collatz"></div>
+    <h1 id="resultado"></h1>
+</body>
+</html>
